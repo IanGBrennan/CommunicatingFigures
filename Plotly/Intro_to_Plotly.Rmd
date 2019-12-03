@@ -1,0 +1,60 @@
+---
+title: "Intro to Plotly"
+author: "Ian G. Brennan"
+#date: "02/12/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r, message=F, warning=F}
+library(plotly)
+library(RColorBrewer)
+```
+
+```{r, include=F}
+setwd("~/Documents/GitHub/CommunicatingFigures")
+```
+
+```{r}
+goannas <- readRDS("Goannas.RDS")
+traits <- mutate(goannas$size.data,
+                 TailRatio = Tail/Body_Length)
+```
+
+Interactive plot of monitor body sizes
+```{r}
+sizes <- plot_ly(traits, 
+        x = ~Body_Length, 
+        y = ~Tail, 
+        text = ~paste("Species: ", Name_in_Tree,
+                      "<br> Habitat: ", Habitat), 
+        type = 'scatter', 
+        mode = 'markers', 
+        color = ~TailRatio, 
+        colors = 'YlGnBu',
+        marker = list(size = ~TailRatio*20, 
+                      opacity = 0.75, 
+                      sizemode = "diameter",
+                      line = list(width = 2, 
+                                  color = "black"))) %>%
+  layout(title = 'Monitor Lizard Body and Tail Length',
+         xaxis = list(type = "log"),
+         yaxis = list(type = "log"))
+```
+
+```{r, echo=F}
+sizes
+```
+
+\  
+
+If you decide you want to save your plot online instead of generating it new each time, you could sign up for a *plotly* account. It only takes a minute, and the instructions can be found on the [*plotly* website](https://plot.ly/r/getting-started/).  
+
+Once you're all signed up, you can save individual plots using the 'api_create' function, which will push them to your *plotly* account online.
+```{r, eval=F}
+api_create(sizes, filename = "Varanus_SVL_vs_Tail")
+```

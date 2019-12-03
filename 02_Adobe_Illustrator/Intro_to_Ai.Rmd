@@ -1,0 +1,77 @@
+---
+title: "Intro to Adobe Illustrator"
+author: "Ian G. Brennan"
+#date: "03/12/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r echo=FALSE,warning=FALSE}
+# this is so that figures are displayed in their proper place in the text, and not all at the end. 
+library(knitr)
+  opts_chunk$set(fig.path='figure/graphics-', cache.path='cache/graphics-', fig.align='center',
+                 external=TRUE, echo=TRUE, warning=FALSE, fig.pos='H')
+```
+
+# Learning Ai
+
+There are tons of Adobe Illustrator tutorials available online, and a seemingly infinite number of Illustrator youtube videos.  
+My general feeling is that Ai is a lot like coding, in that you:
+
+* start out thinking you'll never be able to do it well, and that everyone else is a whiz
+* learn enough that you can do some stuff
+* learn enough that you can search efficiently to find out how to do the stuff you don't know how to do
+* realize pretty much everyone except professional illustrators and graphic designers has to look up how to do things in Ai sometimes
+* find out even professional illustrators and graphic designers need to look up how to do things in Ai sometimes
+
+
+The [best tutorial](https://www.pgsd.org/cms/lib07/PA01916597/Centricity/Domain/202/illustrator_for_beginners_tastytuts.pdf) I've come across is by [Gareth Davis Studio](https://www.youtube.com/channel/UC64eec0UYHxflyEWgyZOvLA). This long-format tutorial includes pretty much everything you need to know as you work your way through Ai, and is accompanied by short videos for each chapter. It is both intuitive and interactive, and I think it's a great resource to flip back to when you need an introduction or refresher on a tool or method.
+
+---
+
+Instead of just releasing you into the wild with the program, the tutorial, and the internet at your disposal, let's walk through some of the major tools we use.
+
+Adobe Illustrator has an overwhelming amount of features. We'll just barely scrape the surface, but by introducing you to the functionality, hopefully you can pick up the ball and run. The simplest visual explanation of the available tools looks something like this:
+```{r AiTools, echo=FALSE, out.width = '150%', fig.pos='H', eval=T, fig.cap="Tool names and keyboard shortcuts for Ai."}
+knitr::include_graphics("Ai_Tool_Shortcuts.png")
+```
+
+There are slightly more in-depth explanations of the tools in the [Adobe tool galleries](https://helpx.adobe.com/illustrator/using/tool-galleries.html.
+
+\  
+
+Adobe also provides more complete cheat sheets to keyboard shortcuts. I've included them here (one for each of the main operating systems), as a quick reference, but they can also be [found online](https://helpx.adobe.com/au/illustrator/using/default-keyboard-shortcuts.html).
+
+```{r AiMac, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap="Keyboard shortcuts for Ai on Mac."}
+knitr::include_graphics("Ai_CheatSheet_Mac.jpg")
+```
+```{r AiWind, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap="Keyboard shortcuts for Ai on Windows."}
+knitr::include_graphics("Ai_CheatSheet_Windows.jpg")
+```
+
+---
+
+Let's walk through the basic tool and what they do. Instead of reinventing the wheel, I'm going to borrow gifs from [*Ponoko*](https://www.ponoko.com/blog/how-to-make/adobe-illustrator-tools/) to illustrate each tool's use.
+
+#### Selection (V)
+```{r SelectV, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap="The direct"}
+knitr::include_graphics("Tools_Select_V.gif")
+```
+
+#### Direct Selection (A)
+```{r SelectA, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap="The direct"}
+knitr::include_graphics("Tools_Select_A.gif")
+```
+
+#### Lasso (Selection) (Q)
+```{r Lasso, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap="The direct"}
+knitr::include_graphics("Tools_Lasso_Q.gif")
+```
+
+#### Magic Wand (Y)
+```{r Wand, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap="The direct"}
+knitr::include_graphics("Tools_MagicWand_Y.gif")
+```

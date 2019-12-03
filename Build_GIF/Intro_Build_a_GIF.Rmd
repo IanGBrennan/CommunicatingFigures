@@ -1,0 +1,42 @@
+---
+title: "Build a GIF"
+author: "Ian G. Brennan"
+#date: "03/12/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Install packages if you haven't already
+```{r, eval=F}
+install.packages("purrr")
+install.packages("magick")
+```
+
+Load them when you got 'em
+```{r}
+library(purrr); 
+library(magick);
+```
+
+Set your working directory
+```{r}
+setwd("~/Documents/GitHub/CommunicatingFigures/PPT_GIF/Dave_Limerick")
+```
+
+List those images  
+Read them in  
+Make the animation!
+```{r}
+gifname <- "Dave_Limerick"
+```
+
+```{r}
+list.files(path = paste0(getwd(),"/"), pattern = "*.jpeg", full.names = T) %>% 
+  map(image_read) %>% # reads each path file
+  image_join() %>% # joins image
+  image_animate(fps=0.5) %>% # animates, can set the Frames Per Second or number of loops
+  image_write(paste0(getwd(),"/", gifname,".gif")) # write to current dir
+```
