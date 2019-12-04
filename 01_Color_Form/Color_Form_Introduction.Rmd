@@ -1,9 +1,10 @@
 ---
-title: "Color_Form"
+title: "Image Basics"
 author: "Ian G. Brennan"
 #date: "02/12/2019"
 output: 
-  html_document
+  html_document:
+    toc: true
   #bookdown::pdf_document2:
   #    toc: false
   #    number_sections: false
@@ -26,12 +27,17 @@ knitr::opts_chunk$set(echo = TRUE)
 setwd("~/Documents/GitHub/CommunicatingFigures/01_Color_Form")
 ```
 
+---
+
+# Package Prep
+
 Start by loading a few common packages for visualization in R. If you don't have these packages already installed, we can do that first.
 ```{r, eval=F}
 install.packages("ggplot2")
 install.packages("phytools")
 install.packages("gridExtra")
 install.packages("RColorBrewer")
+install.packages("viridis")
 install.packages("dplyr")
 ```
 
@@ -43,11 +49,17 @@ library(ggplot2)
 library(phytools)
 library(gridExtra)
 library(RColorBrewer)
+library(viridis)
 library(dplyr)
 ```
 
 \  
 
+---
+
+# Color Palettes
+
+There are a million and one color palettes available in R now. It seems like a new one pops up everyday.  
 Let's have a look at some color schemes
 ```{r}
 display.brewer.all()
@@ -58,19 +70,21 @@ Roughly 4.5% of the world's population (345 million people!) are colorblind to s
 display.brewer.all(colorblindFriendly = T)
 ``` 
 
-There are a million and one color palettes available in R now. It seems like a new one pops up everyday.  
-The package *scales* has a useful function *show_col()* for looking at palettes.  
-This gives us the hex numbers (#......) which we can use to choose specific colors.
-```{r}
+For reference, the package *scales* has a useful function *show_col()* for looking at palettes.  
+This gives us the hex numbers (#......) which we can use to choose specific colors. Hex numbers can also come in handy if you want to identify a specific color later in Adobe Illustrator.
+```{r, message=F}
 library(scales)
 library(wesanderson)
 library(colRoz)
 show_col(wes_palette("Zissou1", 6, type="continuous"))
 show_col(brewer.pal(6, "Paired"))
 show_col(colRoz_pal("c.kingii", 6))
+show_col(viridis(6))
 ```
 
-\  
+---
+
+# Using Color and Shape in Figures
 
 Enough of that, let's load and plot some data to quickly mention color and shape.
 ```{r}
@@ -90,7 +104,7 @@ ggplot(sizes, aes(x=log(Body_Length), y=TailRatio)) +
 
 I don't want to get too caught up here, but there are a few quick things we want to keep in mind.
 
-* the grey background is distracting
+* the grey background is cluttered
 * the points are too small to see
 * the data really aren't telling us much here
 
@@ -181,7 +195,9 @@ ggsave(filename = "Color_Comparison.pdf",
        plot = together,
        useDingbats = F)
 ```
- 
+
+---
+
 # Visual File Types
 
 Before we can go about changing image files, we need to consider how they're composed.  

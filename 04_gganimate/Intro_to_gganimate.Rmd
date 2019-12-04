@@ -1,0 +1,98 @@
+---
+title: "Intro to gganimate"
+author: "Ian G. Brennan"
+#date: "02/12/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The previous method (*03_Build_GIF*) to create a GIF in R from a series of images is surely the shortcut way, and we can do better.  
+The *gganimate* package can make this process much smoother, especially if we already have some understanding of the syntax in *ggplot2*. 
+
+Install then load the below packages.
+```{r, message=F}
+library(transformr)
+library(gganimate)
+library(ggplot2)
+library(RColorBrewer)
+library(dplyr)
+```
+
+```{r, include=F, eval=F}
+setwd("~/Documents/GitHub/CommunicatingFigures")
+```
+
+Let's read in the same data we've been playing with already. 
+```{r}
+goannas <- readRDS("Goannas.RDS")
+traits <- mutate(goannas$size.data,
+                 TailRatio = Tail/Body_Length)
+```
+
+Before we get into plotting, we want to define a color scheme that we're happy working with. 
+```{r}
+gramp <- colorRampPalette(brewer.pal(5, "YlGnBu"))
+gcolors <- gramp(nrow(traits)); 
+traits <- traits[order(traits$Body_Length),]
+traits <- mutate(traits, plotcols = gcolors)
+```
+
+Now let's plot the data, and animate it. Once we've got this GIF, I'll try to explain how it's all working. 
+```{r}
+TailSVL <- ggplot(traits, 
+                  aes(x=log(Body_Length), 
+                      y=log(Tail),
+                      size=TailRatio)) +
+  geom_point(alpha=0.75, 
+             show.legend=FALSE, 
+             color="black", 
+             fill=traits$plotcols, 
+             shape=21) + 
+  # designate color here to keep the smoothness
+  theme_bw() +
+  scale_size(range=c(5,20)) +
+  labs(title="Habitat: {closest_state}") + 
+  # this will label the plot by the groupings
+  transition_states(Habitat, 
+                    transition_length=5, 
+                    state_length=3) +
+  ease_aes('cubic-in-out')
+```
+
+Save the GIF externally
+```{r, eval=T}
+anim_save(TailSVL, file="TailSVL.gif")
+```
+
+![](TailSVL.gif)
+
+The beauty of *gganimate* is that we set up the plot just like we would our normal static *ggplot* figure.
+```{r}
+ggplot(traits,
+       aes(x=log(Body_Length),
+           y=log(Tail),
+           size=TailRatio)) +
+  geom_point(alpha=0.75, 
+             show.legend=FALSE, 
+             color="black", 
+             fill=traits$plotcols, 
+             shape=21) + 
+  # designate color here to keep the smoothness
+  theme_bw() +
+  scale_size(range=c(5,20))
+```
+
+We've plotted **Tail** length as a function of **Body_Length**, with each point colored scaled to the **Tail/Body_Length** ratio. Great. 
+
+All we need to animate this now is to split our plot up into a factor. This could be discrete bins of some value, or in our case, we'll split the plots up by the preferred habitat type **Habitat**. We also choose how much time for the GIF to stay in each frame (*state_length*), and how long it should take to transition between frames (*transition_length*). 
+```{r, eval=F}
+  transition_states(Habitat, 
+                    transition_length=5, 
+                    state_length=3) +
+  ease_aes('cubic-in-out')
+```
+
+Sick one. Maybe we have time/data to create another!

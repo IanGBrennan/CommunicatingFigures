@@ -1,0 +1,77 @@
+---
+title: "Intro to Plotly"
+author: "Ian G. Brennan"
+#date: "02/12/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+GIFs are great and all, but what about if we want to create *really* interactive plots?
+
+
+Start by installing and loading the two packages. We'll be relying on *plotly*
+```{r, message=F, warning=F}
+library(plotly)
+library(RColorBrewer)
+```
+
+```{r, include=F, eval=F}
+setwd("~/Documents/GitHub/CommunicatingFigures")
+```
+
+One last time, we'll read in the same data we've been playing with already.  
+I realize you probably all hate monitor lizards already. It's ok, we're almost done.
+```{r}
+goannas <- readRDS("Goannas.RDS")
+traits <- mutate(goannas$size.data,
+                 TailRatio = Tail/Body_Length)
+```
+
+*plotly* works in a different way from *ggplot* and *gganimate*, but the syntax is perhaps more intuitive.  
+Let's get the plot then break it down.
+```{r}
+sizes <- plot_ly(traits, 
+        x = ~Body_Length, 
+        y = ~Tail, 
+        text = ~paste("Species: ", Name_in_Tree,
+                      "<br> Habitat: ", Habitat), 
+        type = 'scatter', 
+        mode = 'markers', 
+        color = ~TailRatio, 
+        colors = 'YlGnBu',
+        marker = list(size = ~TailRatio*20, 
+                      opacity = 0.75, 
+                      sizemode = "diameter",
+                      line = list(width = 2, 
+                                  color = "black"))) %>%
+  layout(title = 'Monitor Lizard Body and Tail Length',
+         xaxis = list(type = "log"),
+         yaxis = list(type = "log"))
+```
+
+```{r, echo=F}
+sizes
+```
+
+Just like you expect, we've designated:
+
+* x axis: Body_Length
+* y axis: Tail (length)
+* text: what we want displayed when we hover over a point
+* type: scatter plot
+* color: Tail/Body_Length ratio
+* colors: this will take RColorBrewer palettes, nice!
+* marker: specifics of our point aesthetics
+* layout: give it a title, and the scale for the axes
+
+\  
+
+If you decide you want to save your plot online instead of generating it new each time, you could sign up for a *plotly* account. It only takes a minute, and the instructions can be found on the [*plotly* website](https://plot.ly/r/getting-started/).  
+
+Once you're all signed up, you can save individual plots using the 'api_create' function, which will push them to your *plotly* account online.
+```{r, eval=F}
+api_create(sizes, filename = "Varanus_SVL_vs_Tail")
+```

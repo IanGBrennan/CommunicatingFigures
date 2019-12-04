@@ -2,7 +2,9 @@
 title: "Intro to Adobe Illustrator"
 author: "Ian G. Brennan"
 #date: "03/12/2019"
-output: html_document
+output: 
+  html_document:
+    toc: true
 ---
 
 ```{r setup, include=FALSE}
@@ -16,7 +18,7 @@ library(knitr)
                  external=TRUE, echo=TRUE, warning=FALSE, fig.pos='H')
 ```
 
-# Learning Ai
+# Learning How to Learn Ai
 
 There are tons of Adobe Illustrator tutorials available online, and a seemingly infinite number of Illustrator youtube videos.  
 My general feeling is that Ai is a lot like coding, in that you:
@@ -34,7 +36,13 @@ The [best tutorial](https://www.pgsd.org/cms/lib07/PA01916597/Centricity/Domain/
 
 Instead of just releasing you into the wild with the program, the tutorial, and the internet at your disposal, let's walk through some of the major tools we use.
 
+First let's choose an image to play with. Because I'm in control of your free will, we'll mess around with the frog drawing. Start by opening it (**Cophixalus.pdf**) in Illustrator. While we walk through the common Ai tools, we can try them out on this poor frog.
+```{r Frog, echo=FALSE, out.width = '50%', fig.pos='H', eval=T, fig.cap=""}
+knitr::include_graphics("Cophixalus.png")
+```
+
 Adobe Illustrator has an overwhelming amount of features. We'll just barely scrape the surface, but by introducing you to the functionality, hopefully you can pick up the ball and run. The simplest visual explanation of the available tools looks something like this:
+
 ```{r AiTools, echo=FALSE, out.width = '150%', fig.pos='H', eval=T, fig.cap="Tool names and keyboard shortcuts for Ai."}
 knitr::include_graphics("Ai_Tool_Shortcuts.png")
 ```
@@ -43,7 +51,7 @@ There are slightly more in-depth explanations of the tools in the [Adobe tool ga
 
 \  
 
-Adobe also provides more complete cheat sheets to keyboard shortcuts. I've included them here (one for each of the main operating systems), as a quick reference, but they can also be [found online](https://helpx.adobe.com/au/illustrator/using/default-keyboard-shortcuts.html).
+Adobe also provides more complete cheat sheets to keyboard shortcuts. I've included them here (one for each of the main operating systems), as a quick reference, but they can also be [found online](https://helpx.adobe.com/au/illustrator/using/default-keyboard-shortcuts.html). You'll see what I mean about "shortcuts", and why they might be useful once we start messing around with Ai in earnest.
 
 ```{r AiMac, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap="Keyboard shortcuts for Ai on Mac."}
 knitr::include_graphics("Ai_CheatSheet_Mac.jpg")
@@ -54,24 +62,109 @@ knitr::include_graphics("Ai_CheatSheet_Windows.jpg")
 
 ---
 
-Let's walk through the basic tool and what they do. Instead of reinventing the wheel, I'm going to borrow gifs from [*Ponoko*](https://www.ponoko.com/blog/how-to-make/adobe-illustrator-tools/) to illustrate each tool's use.
+# Tool Use
 
-#### Selection (V)
-```{r SelectV, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap="The direct"}
+Maybe the most important thing you can remember is that you can always undo/redo any process in Adobe Illustrator. Because of this, **undo** (Command+Z; Ctrl+Z) and **redo** (Command+Shift+Z; Ctrl+Shift+Z) are arguably the most valuable assets you have.
+
+Let's walk through the basic tools and what they do. Then I'll give you a couple other shortcut favorites of mine.  
+
+Instead of reinventing the wheel, I'm going to borrow gifs from [*Ponoko*](https://www.ponoko.com/blog/how-to-make/adobe-illustrator-tools/) to illustrate each tool's use.
+
+In your open Ai window, try out the actions depicted in the GIFs, and I'll follow along as well.
+
+---
+
+### Selection (V)
+The (V) selection tool is your broadest brush in selecting elements in your design. It will select and move the entire object chosen, without distorting it. If you want to move the object quite far, you can just drag and drop it wherever you'd like. If you'd prefer to just nudge it a bit, you can select the object, then move it with your arrow keys. If you like the control that moving with the arrow keys provides, you can hold shift as you press the arrow to move it a greater distance quickly.
+
+```{r SelectV, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap=""}
 knitr::include_graphics("Tools_Select_V.gif")
 ```
 
-#### Direct Selection (A)
-```{r SelectA, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap="The direct"}
+---
+
+### Direct Selection (A)
+The (A) direct selection tool is the finer complement to the (V) selection tool. It will allow you to choose specific parts of an object, generally individual elements or points. This tool is super useful, but can take a little longer to get used to. If you're looking to copy or delete a part of an object, this is your guy. You can also click and drag to make a direct selection of everything within a rectangle. 
+
+```{r SelectA, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap=""}
 knitr::include_graphics("Tools_Select_A.gif")
 ```
 
-#### Lasso (Selection) (Q)
-```{r Lasso, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap="The direct"}
+---
+
+### Lasso (Selection) (Q)
+If you're looking to make a direct selection, but of something that doesn't fit into a rectangle, you'll want the (Q) Lasso tool.
+
+```{r Lasso, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap=""}
 knitr::include_graphics("Tools_Lasso_Q.gif")
 ```
 
-#### Magic Wand (Y)
-```{r Wand, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap="The direct"}
+---
+
+### Magic Wand (Y)
+As the name implies, the (Y) magic wand tool is indeed magic. This tool will select objects that are similar or identical to the object you choose with the wand. To see what I mean, double-click on the wand, and it will give you the options **Fill Color**, **Stroke Color**, **Stroke Weight**, **Opacity**, and **Blending Mode**. By ticking one or more of these boxes, we can select all the same color or weighted fills and strokes. 
+
+```{r Wand, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap=""}
 knitr::include_graphics("Tools_MagicWand_Y.gif")
 ```
+
+---
+
+### Pencil (N)
+The (N) pencil tool is the most versatile drawing tool you've got at your disposal. With the pencil tool we can easily create both strokes and fills, and dictate both very specific (jagged) and general (smooth) paths. 
+
+```{r Pencil, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap=""}
+knitr::include_graphics("Tools_Pencil_N.gif")
+```
+
+---
+
+### Smoother (Shift+N)
+The pencil tool has additional functionality in that it hides the smoothing tool (Shift+N). Click and hold the pencil tool to reveal the smooth tool, or click Shift+N, which will remove points along your path to create a smoother line.
+
+```{r PencilSmooth, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap=""}
+knitr::include_graphics("Tools_Pencil_Smooth.gif")
+```
+
+---
+
+### Shaper
+You could quickly create shapes with the ellipse, polygon, or rectangle tools, but you can get all the same functionality in one place with the shaper tool. Draw a simple shape, and Ai will interpret what you were going for. 
+
+```{r Shaper, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap=""}
+knitr::include_graphics("Tools_Shaper.gif")
+```
+
+---
+
+### Pen (P)
+Once you've gotten hold of the pencil tool, you might try your hand with the (P) pen tool. This creates anchor points with handles that dictate the curve of the line at those points. It's not immediately intuitive the way the pencil tool is, but once you get a handle of it, you'll realize how nice it is to create smooth shapes and lines. 
+
+```{r Pen, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap=""}
+knitr::include_graphics("Tools_Pen_P.gif")
+```
+
+---
+
+### Type (T)
+At some point we'll probably want to add text, and we can do this with the (T) type tool. This tool has a ton you can fiddle around with (font, size, color, type along a shape, etc.), below is just the tip of the iceberg, but we can try out some alternative things too.
+
+```{r Type, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap=""}
+knitr::include_graphics("Tools_Type_T.gif")
+```
+
+---
+
+### Eyedropper (I)
+We all know that feeling of finding a color we like. The (I) eyedropper tool makes life a little easier by letting us copy that beautiful hue and apply it whatever fill or stroke we'd like. 
+
+```{r Eye, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap=""}
+knitr::include_graphics("Tools_Eyedropper_I.gif")
+```
+
+---
+
+There are heaps more tools that are useful and you may want to use at some point. Those above are just the ones I think make an immediate difference when you're learning Illustrator. 
+
+I'll demonstrate a few additional things we can do simply, and then I can make some more gifs and add them to this document.  
+Which would you like to see?
