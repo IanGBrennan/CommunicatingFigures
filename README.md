@@ -6,14 +6,14 @@ The basic format includes 6 interactive tutorials that are accompanied by hands-
 
 Each activity is included in its own folder (01-06), which includes all the files required to replicate the exercise. I've designed it all in RMarkdown, and exported it as html files, so when you open a folder you can open the html in a browser and follow along, or open the markdown file (.Rmd) and go through there taking notes as you go. 
 
-## Activity 01 "Color and Form"
+### Activity 01 "Color and Form"
 
-## Activity 02 "Introducing Adobe Illustrator"
+### Activity 02 "Introducing Adobe Illustrator"
 
-## Activity 03 "Building a GIF"
+### Activity 03 "Building a GIF"
 
-## Activity 04 "GIFs with gganimate"
+### Activity 04 "GIFs with gganimate"
 
-## Activity 05 "Interactive Plots with plotly"
+### Activity 05 "Interactive Plots with plotly"
 
-## Activity 06 "Shiny Web Apps"
+### Activity 06 "Shiny Web Apps"
