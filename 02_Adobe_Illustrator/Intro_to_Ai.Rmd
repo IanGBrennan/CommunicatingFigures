@@ -156,7 +156,7 @@ knitr::include_graphics("Tools_Type_T.gif")
 ---
 
 ### Eyedropper (I)
-We all know that feeling of finding a color we like. The (I) eyedropper tool makes life a little easier by letting us copy that beautiful hue and apply it whatever fill or stroke we'd like. 
+We all know that feeling of finding a color we like. The (I) eyedropper tool makes life a little easier by letting us copy that beautiful hue and apply it whatever fill or stroke we'd like. Copy a color from an image you like just by touching with the eyedropper.
 
 ```{r Eye, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap=""}
 knitr::include_graphics("Tools_Eyedropper_I.gif")
@@ -164,7 +164,24 @@ knitr::include_graphics("Tools_Eyedropper_I.gif")
 
 ---
 
+### Reflect (O) and Rotate (R)
+Add these in.
+
+### Artboard Size
+Do this one at the beginning
+
+### Rulers and Grid/Snap-to-Grid
+
+### Layers
+Locking, unlocking, viewing, etc. Which are on top, bottom. 
+
+---
+
 There are heaps more tools that are useful and you may want to use at some point. Those above are just the ones I think make an immediate difference when you're learning Illustrator. 
 
 I'll demonstrate a few additional things we can do simply, and then I can make some more gifs and add them to this document.  
 Which would you like to see?
+
+# Strokes and Fills
+Elaborate on how these are used to make an image.
+
