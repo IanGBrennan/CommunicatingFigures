@@ -27,6 +27,48 @@ knitr::opts_chunk$set(echo = TRUE)
 setwd("~/Documents/GitHub/CommunicatingFigures/01_Color_Form")
 ```
 
+# Visual File Types
+
+Designing valuable high quality figures or illustrations takes time and energy. We can best take advantage of this investment by creating products that we can easily adjust, build upon, or reuse. 
+
+In order to do this, we need to consider how they're composed, so that we understand what we're working with.  
+Image files are almost always stored in one of two basic formats, (**1**) raster or (**2**) vector.
+
+Raster displays (also called bitmap) like a computer screen, are composed of a rectangular grid of pixels. We fill each pixel with color, mosaic them together, and put together an image.
+
+* Common file types: 
+  + PNG
+  + JPEG
+  + GIF
+
+Vector displays are stored as lines and fills denoted by 2D points, and so an image is not subdividied into individual cells like in rasters. This allows vector images to scale better (both up *and* down in size).
+
+* Common file types: 
+  + SVG
+  + PDF
+  + EPS
+  + AI
+  
+```{r Rasta, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap="To make sure that you never forget the difference between the two basic image types, I've made you a *Rasta Raster* of Bob Marley, where each 'pixel' is an image of a dog. Ta-da. Really I guess this is actually some sort of meta-raster Rasta."}
+knitr::include_graphics("IMGs/Rasta_Raster_small.png")
+```
+  
+\  
+
+## Making the Case for Vectorized Graphics
+
+Because vector graphics aren't stored as pixels, they're more flexible to changes in size, without changing image quality. For example, if you wanted to use the same design to print a birthday card and a billboard using a raster file, you'd likely have to create low-res and hi-res versions of the same image. The size of the file scales with the quality, so your birthday card image may only be a few kilobytes, but your billboard image might be hundreds of megabytes. In contrast, a vectorized version would have the same file size and quality regardless.
+
+Let's see this in action:
+
+```{r Vector, echo=FALSE, out.width = '75%', fig.pos='H', eval=T, fig.cap="A simple visual explanation of vector vs. raster formats. Ironically, this image is saved as a PNG (a raster format). More information is available at https://en.wikipedia.org/wiki/Vector_graphics"}
+knitr::include_graphics("IMGs/Visual_File_Types.png")
+```
+
+In addition to the convenience of size scaling, keeping our illustrations, figures, or whatever in a vector file format will assure us that we can go back and edit aspects of the original *ad infinitum*. 
+
+We will all now pinky-swear to export our plots/figures/*et al.* in vector format, preferrably as PDFs. 
+
 ---
 
 # Package Prep
@@ -198,45 +240,6 @@ ggsave(filename = "Color_Comparison.pdf",
 
 ---
 
-# Visual File Types
-
-Before we can go about changing image files, we need to consider how they're composed.  
-Image files are almost always stored in one of two basic formats, (**1**) raster or (**2**) vector.
-
-Raster displays (also called bitmap) like a computer screen, are composed of a rectangular grid of pixels. We fill each pixel with color, mosaic them together, and put together an image.
-
-* Common file types: 
-  + PNG
-  + JPEG
-  + GIF
-
-Vector displays are stored as lines and fills denoted by 2D points, and so an image is not subdividied into individual cells like in rasters. This allows vector images to scale better (both up *and* down in size).
-
-* Common file types: 
-  + SVG
-  + PDF
-  + EPS
-  + AI
-  
-```{r Rasta, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap="To make sure that you never forget the difference between the two basic image types, I've made you a *Rasta Raster* of Bob Marley, where each 'pixel' is an image of a dog. Ta-da. Really I guess this is actually some sort of meta-raster Rasta."}
-knitr::include_graphics("Rasta_Raster_small.png")
-```
-  
-\  
-
-## Making the Case for Vectorized Graphics
-
-Because vector graphics aren't stored as pixels, they're more flexible to changes in size, without changing image quality. For example, if you wanted to use the same design to print a birthday card and a billboard using a raster file, you'd likely have to create low-res and hi-res versions of the same image. The size of the file scales with the quality, so your birthday card image may only be a few kilobytes, but your billboard image might be hundreds of megabytes. In contrast, a vectorized version would have the same file size and quality regardless.
-
-Let's see this in action:
-
-```{r Vector, echo=FALSE, out.width = '75%', fig.pos='H', eval=T, fig.cap="A simple visual explanation of vector vs. raster formats. Ironically, this image is saved as a PNG (a raster format). More information is available at https://en.wikipedia.org/wiki/Vector_graphics"}
-knitr::include_graphics("Visual_File_Types.png")
-```
-
-In addition to the convenience of size scaling, keeping our illustrations, figures, or whatever in a vector file format will assure us that we can go back and edit aspects of the original *ad infinitum*. 
-
-We will all now pinky-swear to export our plots/figures/*et al.* in vector format, preferrably as PDFs. 
 
 
 
