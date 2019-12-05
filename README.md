@@ -8,7 +8,7 @@ Each activity is included in its own folder (01-06), which includes all the file
 
 ## Tuesday 10th December
 
-### 01 *Understanding Images*
+### [01 *Understanding Images*](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/01_Understanding_Images)
 
 ### 02 *Introducing Adobe Illustrator*
 
