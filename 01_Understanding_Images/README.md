@@ -1,3 +1,5 @@
+# 01 Understanding Images
+
 Designing valuable high quality figures or illustrations takes time and energy. We can best take advantage of this investment by creating products that we can easily adjust, build upon, or reuse. 
 
 In order to do this, we need to consider how they're composed, so that we understand what we're working with.  
@@ -17,3 +19,5 @@ Vector displays are stored as lines and fills denoted by 2D points, and so an im
   + PDF
   + EPS
   + AI
+
+![Rasta Raster](IMGs/Rasta_Raster.png)
