@@ -8,20 +8,20 @@ Each activity is included in its own folder (01-06), which includes all the file
 
 ## Tuesday 10th December
 
-### 01 "Color and Form"
+### 01 *Understanding Images*
 
-### 02 "Introducing Adobe Illustrator"
+### 02 *Introducing Adobe Illustrator*
 
-### 03 "Building a GIF"
+### 03 *Build-a-GIF*
 
-### 04 "GIFs with gganimate"
+### 04 *GIFs with gganimate*
 
-### 05 "Interactive Plots with plotly"
-
-### 06 "Shiny Web Apps"
+### 05 *Interactive Plots with* plotly
 
 ## Wednesday 11th December
 
-### 07 "Figure Design"
+### 07 *Figure Design*
 
-### 08 "DIY Figs"
+### 08 *DIY Figures*
+
+### (optional) *Shiny Web Apps*
