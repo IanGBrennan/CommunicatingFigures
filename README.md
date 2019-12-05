@@ -12,7 +12,7 @@ Each activity is included in its own folder (01-07), which includes all the file
 Introducing image file types, and why they matter
 
 ### 02 [*Introducing Adobe Illustrator*](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/02_Adobe_Illustrator)
-How can we make the most of Adobe Illustrator? and a quick-guide to tools
+How can we make the most of Adobe Illustrator? A quick-guide to common tools and uses
 
 ### 03 [*Build-a-GIF*](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/03_Build_GIF)
 Using *magick* in R to build a GIF
