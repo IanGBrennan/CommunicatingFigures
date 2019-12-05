@@ -20,4 +20,6 @@ Vector displays are stored as lines and fills denoted by 2D points, and so an im
   + EPS
   + AI
 
-![Rasta Raster](IMGs/Rasta_Raster.png)
+![Rasta Raster](IMGs/Rasta_Raster_Small.png)
+![Rasta Raster2](https://github.com/IanGBrennan/CommunicatingFigures/blob/master/01_Understanding_Images/IMGs/Rasta_Raster_Small.png)
+![Rasta_Raster3](~/IMGs/Rasta_Raster_Small.png)
