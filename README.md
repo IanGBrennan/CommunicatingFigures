@@ -8,19 +8,19 @@ Each activity is included in its own folder (01-06), which includes all the file
 
 ## Tuesday 10th December
 
-### [01 *Understanding Images*](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/01_Understanding_Images)
+### 01 [*Understanding Images*](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/01_Understanding_Images)
 
-### 02 *Introducing Adobe Illustrator*
+### 02 [*Introducing Adobe Illustrator*](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/02_Adobe_Illustrator)
 
-### 03 *Build-a-GIF*
+### 03 [*Build-a-GIF*](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/03_Build_GIF)
 
-### 04 *GIFs with gganimate*
+### 04 [*GIFs with gganimate*](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/04_gganimate)
 
-### 05 *Interactive Plots with* plotly
+### 05 [*Interactive Plots with* plotly](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/05_Plotly)
 
 ## Wednesday 11th December
 
-### 07 *Figure Design*
+### 07 [*Figure Design*](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/07_Figure_Design)
 
 ### 08 *DIY Figures*
 
