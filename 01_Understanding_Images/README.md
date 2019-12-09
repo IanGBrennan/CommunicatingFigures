@@ -20,4 +20,4 @@ Vector displays are stored as lines and fills denoted by 2D points, and so an im
   + EPS
   + AI
 
-![To make sure that you never forget the difference between the two basic image types, I've made you a *Rasta Raster* of Bob Marley, where each 'pixel' is an image of a dog. Ta-da. Really I guess this is actually some sort of meta-raster Rasta.](IMGs/Rasta_Raster_Small.png)
+![The Rasta Raster](IMGs/Rasta_Raster_Small.png)
