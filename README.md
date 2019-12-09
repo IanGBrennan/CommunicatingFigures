@@ -25,10 +25,10 @@ Outside the (static) box, using *plotly* to create interactive plots
 
 ## Wednesday 11th December
 
-### 07 [*Figure Design*](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/07_Figure_Design)
+### 06 [*Figure Design*](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/06_Figure_Design)
 What makes a good figure? And how can we adapt this for presentation slides?
 
-### 08 *DIY Figures*
+### 07 *DIY Figures*
 This is free time to work on a figure of your own
 
 ### (optional) *Shiny Web Apps*
