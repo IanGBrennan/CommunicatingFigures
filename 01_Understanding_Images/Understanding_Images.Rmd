@@ -199,9 +199,8 @@ BLUplot <- ggplot(sizes, aes(x=log(Body_Length), y=TailRatio)) +
 --> 
 
 ```{r}
-YGBplot <- ggplot(sizes, aes(x=log(Body_Length), y=TailRatio)) +
-  geom_point(size = 5, aes(colour = Habitat)) + 
-  scale_color_brewer(palette = "YlGnBu") +
+BASEplot <- ggplot(sizes, aes(x=log(Body_Length), y=TailRatio)) +
+  geom_point(size = 5, aes(colour = "All")) + 
     theme_classic()
 ```
 
@@ -229,7 +228,7 @@ BLUplot <- ggplot(sizes, aes(x=log(Body_Length), y=TailRatio)) +
 ```
 
 ```{r, message=F}
-together <- grid.arrange(SPCplot, YGBplot, BLUplot, REDplot, nrow=2)
+together <- grid.arrange(BASEplot, SPCplot, BLUplot, REDplot, nrow=2)
 ```
 Save this for later, and we can come back to edit it.
 ```{r, message=F}
