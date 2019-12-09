@@ -1,23 +1,6 @@
 # 01 Understanding Images
 
-Designing valuable high quality figures or illustrations takes time and energy. We can best take advantage of this investment by creating products that we can easily adjust, build upon, or reuse. 
+Designing valuable figures or illustrations takes time and energy. We can best take advantage of this investment by creating products that we can easily adjust, build upon, or reuse. This first segment of the workshop focuses on introducing file types, and some considerations of color and shape that we'll come back to later.
 
-In order to do this, we need to consider how they're composed, so that we understand what we're working with.  
-Image files are almost always stored in one of two basic formats, (**1**) raster or (**2**) vector.
-
-Raster displays (also called bitmap) like a computer screen, are composed of a rectangular grid of pixels. We fill each pixel with color, mosaic them together, and put together an image.
-
-* Common file types: 
-  + PNG
-  + JPEG
-  + GIF
-
-Vector displays are stored as lines and fills denoted by 2D points, and so an image is not subdividied into individual cells like in rasters. This allows vector images to scale better (both up *and* down in size).
-
-* Common file types: 
-  + SVG
-  + PDF
-  + EPS
-  + AI
-
-![To make sure that you never forget the difference between the two basic image types, I've made you a *Rasta Raster* of Bob Marley, where each 'pixel' is an image of a dog. Ta-da. Really I guess this is actually some sort of meta-raster Rasta.](IMGs/Rasta_Raster_Small.png)
+Stick around and find out more about this picture!
+![The Rasta Raster](IMGs/Rasta_Raster_Small.png)
