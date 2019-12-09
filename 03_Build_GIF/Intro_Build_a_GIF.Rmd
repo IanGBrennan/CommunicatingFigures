@@ -59,7 +59,7 @@ list.files(path = paste0(getwd(),"/Dave_Limerick/"), pattern = "*.jpeg", full.na
 
 Finally, we should appreciate our hard work, look at our Dave-GIF!
 
-```{r Dave, echo=FALSE, out.height = '100%', fig.pos='H', eval=T, fig.cap=""}
+```{r Dave, echo=FALSE, out.height = '50%', fig.pos='H', eval=T, fig.cap=""}
 knitr::include_graphics("Dave_Limerick.gif")
 ```
 

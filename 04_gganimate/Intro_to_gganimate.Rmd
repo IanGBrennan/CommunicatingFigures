@@ -19,6 +19,8 @@ library(gganimate)
 library(ggplot2)
 library(RColorBrewer)
 library(dplyr)
+library(phytools)
+library(ggmap)
 ```
 
 ```{r, include=F, eval=F}
@@ -27,7 +29,7 @@ setwd("~/Documents/GitHub/CommunicatingFigures")
 
 Let's read in the same data we've been playing with already. 
 ```{r}
-goannas <- readRDS("Goannas.RDS")
+goannas <- readRDS("Data/Goannas.RDS")
 traits <- mutate(goannas$size.data,
                  TailRatio = Tail/Body_Length)
 ```
@@ -96,3 +98,56 @@ All we need to animate this now is to split our plot up into a factor. This coul
 ```
 
 Sick one. Maybe we have time/data to create another!
+
+How about animating the evolution of species ranges?
+```{r}
+ranges <- filter(goannas$distribution.data, 
+                 Name_in_Tree == "Varanus.mertensi" |
+                 Name_in_Tree == "Varanus.giganteus")
+ranges$Time <- 0
+```
+
+Grab the distribution for MRCA of these taxa (node 56)
+```{r}
+mrcaVg <- filter(goannas$rase.data$DistData, 
+                 Name_in_Tree == "n56")[,1:3]
+mrcaVg$Name_in_Tree <- "Varanus.giganteus"
+
+mrcaVm <- filter(goannas$rase.data$DistData,
+                 Name_in_Tree == "n56")[,1:3]
+mrcaVm$Name_in_Tree <- "Varanus.mertensi"
+
+mrca <- rbind(mrcaVg, mrcaVm)
+# set the time of the MRCA
+mrca$Time <- round(max(nodeHeights(goannas$phy)) -
+  nodeheight(goannas$phy, 56), 2)
+# combine with the current distribution
+ranges <- rbind(mrca, ranges)
+```
+
+Now we plot the ranges and animate the transitions  
+To recreate this, you'll have to set up a google API in order to use *ggmap* and the function *get_googlemap*
+```{r}
+rangemap <- get_googlemap(center = "Australia", zoom = 4, style = 'feature:all|element:labels|visibility:off')
+
+MRCA_range <- ggmap(rangemap) +
+  stat_density2d(aes(x = Longitude, 
+                     y = Latitude, 
+                     fill = Name_in_Tree), 
+                 alpha = 0.3, bins = 4,
+                 geom = "polygon", data = ranges) + 
+  theme(legend.position = 'none') +
+  scale_fill_manual(values = c("#E31A1C", "#1F78B4")) +
+  labs(title="Time: {closest_state} Million Years Ago") +
+  transition_states(Time, 
+                    transition_length=5, 
+                    state_length=3) +
+  ease_aes('cubic-in-out')
+```
+
+Save the GIF externally
+```{r, eval=T}
+anim_save(MRCA_range, file="N56_MRCA_range.gif")
+```
+
+![](N56_MRCA_range.gif)
