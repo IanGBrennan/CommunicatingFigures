@@ -12,7 +12,7 @@ So, I recommend:
 + choosing a work-in-progress figure from something you're researching
 
 
-If all goes well, this introduction to making better figures will pique your interest, and so I've included all the materials from the longer version of this course below. 
+If all goes well, this introduction to making better figures will pique your interest, and so I've included all the materials from the longer version of this course below. You can download everything in this directory by clicking [this link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FIanGBrennan%2FCommunicatingFigures%2Ftree%2Fmaster%2FNHM).
 
 ---
 
