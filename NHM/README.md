@@ -1,12 +1,22 @@
+**Hello NHM Folks:** We're operating on a short time window (~1 hour) for this tutorial. Because of this, we'll run an abbreviated version that introduces some aesthetic concepts ([intro](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/00_Introduction/Building_Better_Figures.pdf)), then jump straight to messing around with Adobe Illustrator. 
+
+The [introduction]() is just a powerpoint presentation we can run through together. But if you want to be able to take Adobe Illustrator for a spin, I recommend:
++ bringing a laptop and mouse
++ signing up for a [free trial of Adobe Illustrator](https://www.adobe.com/uk/products/illustrator/free-trial-download.html)
++ borrowing an image of your favorite animal or study organism (I often use [flickr](https://www.flickr.com/) for inspiration)
+
+
+---
+
 # Communicating Figures
-This is a short (1.5 day) workshop on how we as scientists can create visuals that better communicate our science, either to our peers or to a broader audience. The course includes some basic discussion of color and design, but mainly focuses on using Adobe Illustrator to make cool figures or accents, and how we can create animated (.gif) and interactive plots. This iteration of the workshop has been designed for [Dave Chapple's](https://www.chapplelab.com/) lab group at [Monash University](https://www.monash.edu/science/schools/biological-sciences/staff/chapple). 
+This directory holds the materials for a short (1.5 day) workshop on how we as scientists can create visuals that better communicate our science, either to our peers or to a broader audience. The course includes some basic discussion of color and design, but mainly focuses on using Adobe Illustrator to make cool figures or accents, and how we can create animated (.gif) and interactive plots. This iteration of the workshop has been designed for Natalie Cooper's lab at the Natural History Museum, London. 
 
 # Outline and Materials
 The basic format includes 6 interactive tutorials that are accompanied by hands-on exercises. Conceivably you could run through all this information on your own (and I encourage you to), but you won't get the full effect without my silky-smooth voice. 
 
 Each activity is included in its own folder (01-07), which includes all the files required to replicate the exercise. I've designed it all in RMarkdown, and exported it as html files, so when you open a folder you can open the html in a browser and follow along, or open the markdown file (.Rmd) and go through there taking notes as you go. 
 
-## Tuesday 10th December
+---
 
 ### 01 [*Understanding Images*](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/01_Understanding_Images)
 Introducing image file types, and why they matter
@@ -23,13 +33,8 @@ Using *gganimate* to animate *ggplot* in R
 ### 05 [*Interactive Plots with* plotly](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/05_Plotly)
 Outside the (static) box, using *plotly* to create interactive plots
 
-## Wednesday 11th December
-
 ### 06 [*Figure Design*](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/06_Figure_Design)
 What makes a good figure? And how can we adapt this for presentation slides?
 
 ### 07 *DIY Figures*
 This is free time to work on a figure of your own
-
-### (optional) *Shiny Web Apps*
-If time allows, we can mess around a little with Shiny to showcase interactive figures in a web interface
