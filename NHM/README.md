@@ -1,9 +1,12 @@
-**Hello NHM Folks:** We're operating on a short time window (~1 hour) for this tutorial. Because of this, we'll run an abbreviated version that introduces some aesthetic concepts ([intro](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/00_Introduction/Building_Better_Figures.pdf)), then jump straight to messing around with Adobe Illustrator. 
+**Hello NHM Folks:** We're operating on a short time window (~1 hour) for this tutorial. Because of this, we'll run an abbreviated version that introduces some aesthetic concepts ([intro](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/NHM/00_Introduction/Building_Better_Figures.pdf)), then jump straight to messing around with Adobe Illustrator. 
 
-The [introduction](https://github.com/IanGBrennan/CommunicatingFigures/tree/master/00_Introduction/Building_Better_Figures.pdf) is just a powerpoint presentation we can run through together. But if you want to be able to take Adobe Illustrator for a spin, I recommend:
+The [introduction](https://github.com/IanGBrennan/CommunicatingFigures/blob/master/NHM/00_Introduction/Building_Better_Figures.pdf) is just a powerpoint presentation we can run through together.  
+To get the most out of our hour we'll take Adobe Illustrator for a spin, and use it to either make a new figure or tweak one you've already got.  
+So, I recommend:
 + bringing a laptop and mouse
 + signing up for a [free trial of Adobe Illustrator](https://www.adobe.com/uk/products/illustrator/free-trial-download.html)
 + borrowing an image of your favorite animal or study organism (I often use [flickr](https://www.flickr.com/) for inspiration)
++ choosing a work-in-progress figure from something you're researching
 
 
 ---
